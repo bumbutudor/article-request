@@ -36,7 +36,7 @@ class ContactController implements RequestHandlerInterface
         $data = $request->getParsedBody();
         $body = $this->translator->trans('article-request.email.contact.body', ['{username}' => $actor->username, '{email}' => $actor->email, '{message}' => $data['message']]);
         $this->mailer->raw($body, function (Message $message) use($data) {
-            $message->to($this->settings->get('tudor-articlerequest.coordinates'));
+            $message->to($this->settings->get('tudor-article-request.coordinates'));
             $message->subject($this->translator->trans('article-request.email.contact.subject'));
         });
         return new EmptyResponse();
