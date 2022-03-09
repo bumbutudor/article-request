@@ -235,9 +235,8 @@ var ArticleRequestPage = /*#__PURE__*/function (_Page) {
       "class": "iconcontainer"
     }, [m("div", {
       "class": "fontico"
-    }, m("i", {
-      "class": "fas fa-pencil-alt"
-    })), m("div", {
+    } // m("i", { class: "fas fa-pencil-alt" })
+    ), m("div", {
       "class": "icocont"
     }, m("div", {
       "class": "titolo1"

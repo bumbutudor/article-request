@@ -83,7 +83,7 @@ export default class ArticleRequestPage extends Page {
               m(
                 "div",
                 { class: "fontico" },
-                m("i", { class: "fas fa-pencil-alt" })
+                // m("i", { class: "fas fa-pencil-alt" })
               ),
               m(
                 "div",
