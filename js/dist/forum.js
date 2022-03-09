@@ -483,7 +483,7 @@ Object(flarum_extend__WEBPACK_IMPORTED_MODULE_0__["extend"])(flarum_components_I
   navItems.add("articleRequestPage", m(flarum_components_LinkButton__WEBPACK_IMPORTED_MODULE_2___default.a, {
     href: app.route("articleRequestPage"),
     icon: "fas fa-hand-paper"
-  }, app.translator.trans("article-request.forum.title")), 100);
+  }, app.translator.trans("article-request.forum.title")), 1000);
   return navItems;
 });
 

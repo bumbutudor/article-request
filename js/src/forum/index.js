@@ -42,7 +42,7 @@ extend(IndexPage.prototype, "navItems", (navItems) => {
     <LinkButton href={app.route("articleRequestPage")} icon="fas fa-hand-paper">
       {app.translator.trans("article-request.forum.title")}
     </LinkButton>,
-    100
+    1000
   );
 
   return navItems;
