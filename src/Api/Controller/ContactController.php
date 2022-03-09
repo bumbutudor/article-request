@@ -1,6 +1,6 @@
 <?php
 
-namespace Justoverclock\Contactme\Api\Controller;
+namespace Tudor\ArticleRequest\Api\Controller;
 
 use Flarum\Http\RequestUtil;
 use Laminas\Diactoros\Response\EmptyResponse;
@@ -34,10 +34,10 @@ class ContactController implements RequestHandlerInterface
         $actor = $request->getAttribute('actor');
         $actor->assertRegistered();
         $data = $request->getParsedBody();
-        $body = $this->translator->trans('flarum-ext-contactme.email.contact.body', ['{username}' => $actor->username, '{email}' => $actor->email, '{message}' => $data['message']]);
+        $body = $this->translator->trans('article-request.email.contact.body', ['{username}' => $actor->username, '{email}' => $actor->email, '{message}' => $data['message']]);
         $this->mailer->raw($body, function (Message $message) use($data) {
-            $message->to($this->settings->get('justoverclock-contactme.coordinates'));
-            $message->subject($this->translator->trans('flarum-ext-contactme.email.contact.subject'));
+            $message->to($this->settings->get('tudor-articlerequest.coordinates'));
+            $message->subject($this->translator->trans('article-request.email.contact.subject'));
         });
         return new EmptyResponse();
     }

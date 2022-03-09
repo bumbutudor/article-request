@@ -1,10 +1,10 @@
 {
-  "name": "justoverclock/flarum-ext-contactme",
-  "description": "Add Contact Us Page in sidenav",
+  "name": "tudor/article-request",
+  "description": "Request for an article",
   "keywords": [
     "flarum",
-    "contact form",
-    "contact"
+    "request article form",
+    "form"
   ],
   "type": "flarum-extension",
   "license": "MIT",
@@ -16,25 +16,25 @@
   },
   "authors": [
     {
-      "name": "Marco Colia",
-      "homepage": "https://flarum.it",
-      "email": "info@flarum.it",
-      "role": "Developer"
+      "name": "Tudor Bumbu",
+      "homepage": "https://github.com/bumbutudor",
+      "email": "tudor@emoldova.org",
+      "role": "Web Developer"
     }
   ],
   "autoload": {
     "psr-4": {
-      "Justoverclock\\Contactme\\": "src/"
+      "Tudor\\ArticleRequest\\": "src/"
     }
   },
   "extra": {
     "flarum-extension": {
-      "title": "Contactme",
+      "title": "Article Request",
       "category": "feauture",
       "icon": {
-        "name": "fas fa-at",
-        "backgroundColor": "red",
-        "color": "white"
+        "name": "fas fa-hand-paper",
+        "backgroundColor": "",
+        "color": ""
       }
     },
     "flagrow": {

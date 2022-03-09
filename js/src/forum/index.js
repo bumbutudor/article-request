@@ -28,18 +28,19 @@ import { extend } from "flarum/extend";
 import IndexPage from "flarum/components/IndexPage";
 import LinkButton from "flarum/components/LinkButton";
 import ContactPage from "./components/ContactPage";
+import ArticleRequestPage from "./components/ArticleRequestPage";
 
-app.initializers.add("justoverclock/flarum-ext-contactme", () => {});
+app.initializers.add("tudor/article-request", () => { });
 
-app.routes.contactPage = {
-  path: "/contact-us",
-  component: ContactPage,
+app.routes.articleRequestPage = {
+  path: "/cere-un-articol",
+  component: ArticleRequestPage,
 };
 extend(IndexPage.prototype, "navItems", (navItems) => {
   navItems.add(
-    "contactPage",
-    <LinkButton href={app.route("contactPage")} icon="fas fa-at">
-      {app.translator.trans("flarum-ext-contactme.forum.title")}
+    "articleRequestPage",
+    <LinkButton href={app.route("articleRequestPage")} icon="fas fa-hand-paper">
+      {app.translator.trans("article-request.forum.title")}
     </LinkButton>,
     100
   );

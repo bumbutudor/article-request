@@ -9,21 +9,21 @@
  * file that was distributed with this source code.
  */
 
-namespace Justoverclock\Contactme;
+namespace Tudor\ArticleRequest;
 
 use Flarum\Extend;
-use Justoverclock\Contactme\Api\Controller\ContactController;
+use Tudor\ArticleRequest\Api\Controller\ContactController;
 
 return [
     (new Extend\Frontend('forum'))
         ->js(__DIR__.'/js/dist/forum.js')
         ->css(__DIR__.'/resources/less/forum.less')
-        ->route('/contact-us', 'justoverclock/flarum-ext-contactme'),
+        ->route('/cere-un-articol', 'tudor/article-request'),
     (new Extend\Frontend('admin'))
         ->js(__DIR__.'/js/dist/admin.js')
         ->css(__DIR__.'/resources/less/admin.less'),
     (new Extend\Routes('forum'))
-        ->post('/sendmail', 'justoverclock.sendmail', ContactController::class),
+        ->post('/sendmail', 'tudor.sendmail', ContactController::class),
     new Extend\Locales(__DIR__.'/resources/locale'),
 
 ];

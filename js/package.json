@@ -1,5 +1,5 @@
 {
-  "name": "@justoverclock/flarum-ext-contactme",
+  "name": "@tudor/article-request",
   "version": "0.0.0",
   "private": true,
   "dependencies": {

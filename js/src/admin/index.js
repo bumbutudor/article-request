@@ -27,15 +27,15 @@
 import app from "flarum/app";
 import ExtensionPage from "flarum/admin/components/ExtensionPage";
 
-app.initializers.add("justoverclock-contactme", () => {
-  app.extensionData.for("justoverclock-contactme").registerSetting(
+app.initializers.add("tudor-article-request", () => {
+  app.extensionData.for("tudor-article-request").registerSetting(
     {
-      setting: "justoverclock-contactme.coordinates",
+      setting: "tudor-article-request.coordinates",
       name: "emailSettings",
       type: "email",
       required: true,
       label: app.translator.trans(
-        "flarum-ext-contactme.admin.settings.emaillabel"
+        "article-request.admin.settings.emaillabel"
       ),
     },
     15

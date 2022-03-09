@@ -1,11 +1,11 @@
-flarum-ext-contactme:
+article-request:
   settings:
     emaillabel: Email to which the contact form will be sent
   admin:
     settings:
       emaillabel: Email to which the contact form will be sent
   forum:
-    title: Contact Us
+    title: Request an article
     messagesent: Message Sent!
     plsregister: Please register or login
     tocontinue: to continue with this contact form
@@ -13,9 +13,9 @@ flarum-ext-contactme:
     notloggedin: Please login to use the contact form
     placeholderName: Write your name here
     emailfield: Write your email address
-    pageTitle: .Contact Us
+    pageTitle: Request an article
     subject: Message from the contact form
-    sendForm: Send Message
+    sendForm: Send Request
     textAreaField: Write your message here
     pText: |
       <p>By filling out this contact form you can send us commercial communications, partnerships or simply any type of question, which will be answered within a maximum of 7 days..</p>
@@ -33,7 +33,7 @@ flarum-ext-contactme:
       body: |
         Hello!
 
-        You have received a new contact form submission from {username} (email: {email})
+        You have received a new request for an article from {username} (email: {email})
 
         Their message is:
 
