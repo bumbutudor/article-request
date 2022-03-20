@@ -27,7 +27,6 @@
 import { extend } from "flarum/extend";
 import IndexPage from "flarum/components/IndexPage";
 import LinkButton from "flarum/components/LinkButton";
-import ContactPage from "./components/ContactPage";
 import ArticleRequestPage from "./components/ArticleRequestPage";
 
 app.initializers.add("tudor/article-request", () => { });

@@ -112,8 +112,6 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var flarum_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! flarum/app */ "flarum/app");
 /* harmony import */ var flarum_app__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(flarum_app__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var flarum_admin_components_ExtensionPage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! flarum/admin/components/ExtensionPage */ "flarum/admin/components/ExtensionPage");
-/* harmony import */ var flarum_admin_components_ExtensionPage__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(flarum_admin_components_ExtensionPage__WEBPACK_IMPORTED_MODULE_1__);
 /*
  *  Contact Us Extension for Flarum
  *  Author: Marco Colia
@@ -140,7 +138,6 @@ __webpack_require__.r(__webpack_exports__);
  *  SOFTWARE.
  */
 
-
 flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.initializers.add("tudor-article-request", function () {
   flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.extensionData["for"]("tudor-article-request").registerSetting({
     setting: "tudor-article-request.coordinates",
@@ -150,17 +147,6 @@ flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.initializers.add("tudor-articl
     label: flarum_app__WEBPACK_IMPORTED_MODULE_0___default.a.translator.trans("article-request.admin.settings.emaillabel")
   }, 15);
 });
-
-/***/ }),
-
-/***/ "flarum/admin/components/ExtensionPage":
-/*!***********************************************************************!*\
-  !*** external "flarum.core.compat['admin/components/ExtensionPage']" ***!
-  \***********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = flarum.core.compat['admin/components/ExtensionPage'];
 
 /***/ }),
 

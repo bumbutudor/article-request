@@ -1,0 +1,48 @@
+article-request:
+  admin:
+    settings:
+      emaillabel: Adresa de e-mail la care vor fi trimise cererile
+  forum:
+    title: Cere un articol
+    none_tag_option: Selectează etichete
+    messagesent: Cererea a fost trimisă!
+    backsoon: vom reveni cu articolul în scurt timp
+    title_label: Titlul viitorului articol
+    title_helpText: Propuneți un titlu pentru viitorul articol
+    title_placeholder: Scrie un titlu (optional)
+    topic_label: Tema viitorului articol
+    topic_helpText: Specificați tema pentru viitorul articol
+    topic_placeholder: Scrie tema (optional)
+    tags_label: Etichetele viitorului articol
+    tags_helpText: Propuneți etichetele pentru viitorul articol
+    tags_placeholder: Scrie sau selectează etichetele (optional)
+    guestName_label: Numele Dvs.
+    guestName_helpText: Oferiți-ne numele Dvs.
+    guestName_placeholder: Scrie numele Dvs.
+    email_label: Adresa de e-mail
+    email_placeholder: Scrie adresa de e-mail
+    subject_label: Subiectele articolului
+    subject_helpText: Specificați la ce întrebări trebuie să răspundă viitorul articol
+    subject_placeholder: Scrie întrebările tale aici! Întrebare nouă, linie nouă!
+    sendForm: Trimite cererea
+    pText: |
+      <p>Text from Admin (TODO)</p>
+  email:
+    contact:
+      subject: O cerere nouă de articol
+      body: |
+        Salut!
+
+        Ai primit o cerere nouă pentru un articol de la {username} (e-mail: {email})
+
+        Detaliile cererii:
+
+        Titlu: {title}
+
+        Tema: {topic}
+
+        Etichetele: {tags}
+
+        Subiectele așteptate:
+
+        {subjects}

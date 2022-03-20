@@ -14,14 +14,10 @@ use Flarum\Settings\SettingsRepositoryInterface;
 
 
 class ContactController implements RequestHandlerInterface
-
 {
     protected $mailer;
     protected $translator;
     protected $settings;
-
-
-
 
     public function __construct(Mailer $mailer , TranslatorInterface $translator, SettingsRepositoryInterface $settings)
     {
@@ -29,16 +25,41 @@ class ContactController implements RequestHandlerInterface
         $this->translator = $translator;
         $this->settings = $settings;
     }
+
     public function handle(Request $request): Response
     {
         $actor = $request->getAttribute('actor');
-        $actor->assertRegistered();
+
         $data = $request->getParsedBody();
-        $body = $this->translator->trans('article-request.email.contact.body', ['{username}' => $actor->username, '{email}' => $actor->email, '{message}' => $data['message']]);
+        // $actor->assertRegistered();
+
+        if ($actor->isGuest()) {
+            $body = $this->translator->trans('article-request.email.contact.body',
+                [
+                    '{username}' => $data['guestName'],
+                    '{email}' => $data['email'],
+                    '{title}' => $data['title'],
+                    '{topic}' => $data['topic'],
+                    '{tags}' => $data['tags'],
+                    '{subjects}' => $data['subjects']
+                ]);
+        } else {
+            $body = $this->translator->trans('article-request.email.contact.body',
+                [
+                    '{username}' => $actor->username,
+                    '{email}' => $actor->email,
+                    '{title}' => $data['title'],
+                    '{topic}' => $data['topic'],
+                    '{tags}' => $data['tags'],
+                    '{subjects}' => $data['subjects']
+                ]);
+        }
+
         $this->mailer->raw($body, function (Message $message) use($data) {
             $message->to($this->settings->get('tudor-article-request.coordinates'));
             $message->subject($this->translator->trans('article-request.email.contact.subject'));
         });
+        
         return new EmptyResponse();
     }
 }

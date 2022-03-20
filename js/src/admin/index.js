@@ -25,7 +25,6 @@
  */
 
 import app from "flarum/app";
-import ExtensionPage from "flarum/admin/components/ExtensionPage";
 
 app.initializers.add("tudor-article-request", () => {
   app.extensionData.for("tudor-article-request").registerSetting(
