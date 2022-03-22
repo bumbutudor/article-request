@@ -25,5 +25,6 @@ return [
     (new Extend\Routes('forum'))
         ->post('/sendmail', 'tudor.sendmail', ContactController::class),
     new Extend\Locales(__DIR__.'/resources/locale'),
-
+    (new Extend\Settings())
+        ->serializeToForum('articleRequestText', 'tudor-article-request.article_request_text'),
 ];
