@@ -14,8 +14,8 @@ article-request:
     topic_helpText: Specifică subiectul/subiectele care vreai să fie dezvoltate în articol. Acest câmp este opțional.
     topic_placeholder: Scrie aici subiectul dezvoltat
     tags_label: Etichete
-    tags_helpText: Propune etichete noi sau alege din etichetele existente
-    tags_placeholder: Scrie aici sau selectează etichetele. Acest câmp este opțional.
+    tags_helpText: Propune etichete noi sau alege din etichetele existente. Acest câmp este opțional.
+    tags_placeholder: Scrie aici sau selectează etichetele
     guestName_label: Nume/pseudonim
     guestName_helpText: Propune un nume pentru identificare și comunicare.
     guestName_placeholder: Scrie aici un nume/pseudonim
