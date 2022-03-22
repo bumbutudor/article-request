@@ -2,6 +2,8 @@ article-request:
   admin:
     settings:
       emaillabel: Adresa de e-mail la care vor fi trimise cererile
+      description_label: Descrierea articolului
+      description_placeholder: Adaugă o descriere
   forum:
     title: Cere un articol
     none_tag_option: Selectează etichete

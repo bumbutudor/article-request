@@ -2,6 +2,8 @@ article-request:
   admin:
     settings:
       emaillabel: Email to which the contact form will be sent
+      description_label: Description
+      description_placeholder: Add a description
   forum:
     title: Request an article
     none_tag_option: Select tags
