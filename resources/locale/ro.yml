@@ -35,16 +35,15 @@ article-request:
       body: |
         Salut!
 
-        Ai primit o cerere nouă pentru un articol de la {username} (e-mail: {email})
+        Ai primit o cerere de articol de la {username} (e-mail: {email})
 
         Detaliile cererii:
 
-        Titlu: {title}
+        Titlu propus: {title}
 
-        Tema: {topic}
+        Subiectul dezvoltat: {topic}
 
-        Etichetele: {tags}
+        Etichete: {tags}
 
-        Subiectele așteptate:
-
+        Intrebări:
         {subjects}
