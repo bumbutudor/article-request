@@ -35,14 +35,22 @@ app.routes.articleRequestPage = {
   path: "/cere-un-articol",
   component: ArticleRequestPage,
 };
-extend(IndexPage.prototype, "navItems", (navItems) => {
-  navItems.add(
+
+extend(IndexPage.prototype, "sidebarItems", (items) => {
+  if (items.has('newDiscussion')) {
+    items.items.newDiscussion.priority = 2;
+  }
+
+  items.add(
     "articleRequestPage",
-    <LinkButton href={app.route("articleRequestPage")} icon="fas fa-hand-paper">
-      {app.translator.trans("article-request.forum.title")}
-    </LinkButton>,
-    1000
+    LinkButton.component({
+      className: 'Button Button--primary ArticleRequest',
+      href: app.route("articleRequestPage"),
+    },
+    app.translator.trans("article-request.forum.title")
+    ),
+    1
   );
 
-  return navItems;
+  return items;
 });

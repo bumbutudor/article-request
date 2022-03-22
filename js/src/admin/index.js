@@ -27,16 +27,26 @@
 import app from "flarum/app";
 
 app.initializers.add("tudor-article-request", () => {
-  app.extensionData.for("tudor-article-request").registerSetting(
-    {
-      setting: "tudor-article-request.coordinates",
-      name: "emailSettings",
-      type: "email",
-      required: true,
-      label: app.translator.trans(
-        "article-request.admin.settings.emaillabel"
-      ),
-    },
-    15
-  );
+  app.extensionData.for("tudor-article-request")
+    .registerSetting(
+      {
+        setting: "tudor-article-request.coordinates",
+        name: "emailSettings",
+        type: "email",
+        required: true,
+        label: app.translator.trans(
+          "article-request.admin.settings.emaillabel"
+        ),
+      },
+      15
+    )
+    .registerSetting(function () {
+      return m('.Form-group', [
+          m('label', app.translator.trans('article-request.admin.settings.description_label')),
+          m('textarea.FormControl', {
+              placeholder: app.translator.trans('article-request.admin.settings.description_placeholder'),
+              bidi: this.setting("tudor-article-request.article_request_text", ''),
+          }),
+      ])
+    })
 });
