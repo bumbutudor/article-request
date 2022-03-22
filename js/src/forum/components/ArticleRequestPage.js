@@ -80,40 +80,42 @@ export default class ArticleRequestPage extends Page {
       m('.Form-group.field', [
         m('label', app.translator.trans("article-request.forum.tags_label")),
         m('.helpText', app.translator.trans("article-request.forum.tags_helpText")),
-        m("input.FormControl", {
-          value: this.tags(),
-          placeholder: app.translator.trans("article-request.forum.tags_placeholder"),
-          oninput: (e) => {
-            this.tags(e.target.value);
-            this.selectedTags = this.tags().split(",").map((el) => el.trim());
-            this.allTags.map((tag) => {
-              const slug = tag.attributes.slug;
-              const name = tag.attributes.name;
-  
-              if (!this.selectedTags.includes(name)) {
-                this.tagOptions[slug] = name;
-              } else {
-                delete this.tagOptions[slug];
-              }
-            });
-          },
-        }),
-        Select.component({
-          options: this.tagOptions,
-          value: 'none',
-          onchange: (e) => {
-            this.allTags.map((tag) => {
-              const slug = tag.attributes.slug;
-              const name = tag.attributes.name;
-              
-              if (slug === e) {
-                (this.tags() != "") ? this.tags(this.tags() + ", " + name) : this.tags(name);
-                this.selectedTags = this.tags().split(",").map((el) => el.trim());
-                delete this.tagOptions[slug];
-              }
-            });
-          },
-        }),
+        m('.inline', 
+          m("input.FormControl", {
+            value: this.tags(),
+            placeholder: app.translator.trans("article-request.forum.tags_placeholder"),
+            oninput: (e) => {
+              this.tags(e.target.value);
+              this.selectedTags = this.tags().split(",").map((el) => el.trim());
+              this.allTags.map((tag) => {
+                const slug = tag.attributes.slug;
+                const name = tag.attributes.name;
+    
+                if (!this.selectedTags.includes(name)) {
+                  this.tagOptions[slug] = name;
+                } else {
+                  delete this.tagOptions[slug];
+                }
+              });
+            },
+          }),
+          Select.component({
+            options: this.tagOptions,
+            value: 'none',
+            onchange: (e) => {
+              this.allTags.map((tag) => {
+                const slug = tag.attributes.slug;
+                const name = tag.attributes.name;
+                
+                if (slug === e) {
+                  (this.tags() != "") ? this.tags(this.tags() + ", " + name) : this.tags(name);
+                  this.selectedTags = this.tags().split(",").map((el) => el.trim());
+                  delete this.tagOptions[slug];
+                }
+              });
+            },
+          }),
+        )
       ]),
       (!app.session.user) ?
         m('.Form-group.field', [
@@ -137,7 +139,7 @@ export default class ArticleRequestPage extends Page {
       m('.Form-group.field', [
         m('label', app.translator.trans("article-request.forum.subject_label")),
         m('.helpText', app.translator.trans("article-request.forum.subject_helpText")),
-        m("textarea.message1", {
+        m("textarea.message1.FormControl", {
           required: true,
           bidi: this.subjects,
           placeholder: app.translator.trans("article-request.forum.subject_placeholder")

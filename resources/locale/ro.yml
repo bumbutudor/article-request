@@ -24,7 +24,7 @@ article-request:
     email_label: Email
     email_placeholder: Scrie aici emailul tău pentru a primi notificari
     subject_label: Întrebări la care ar trebui sa răspundă articolul
-    subject_helpText: 
+    subject_helpText: Specificați întrebarile la care trebuie să răspundă viitorul articol
     subject_placeholder: Scrie aici întrebările
     sendForm: Trimite cererea
     pText: |
