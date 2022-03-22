@@ -7,23 +7,23 @@ article-request:
     none_tag_option: Selectează etichete
     messagesent: Cererea a fost trimisă!
     backsoon: vom reveni cu articolul în scurt timp
-    title_label: Titlul viitorului articol
-    title_helpText: Propuneți un titlu pentru viitorul articol
-    title_placeholder: Scrie un titlu (optional)
-    topic_label: Tema viitorului articol
-    topic_helpText: Specificați tema pentru viitorul articol
-    topic_placeholder: Scrie tema (optional)
-    tags_label: Etichetele viitorului articol
-    tags_helpText: Propuneți etichetele pentru viitorul articol
-    tags_placeholder: Scrie sau selectează etichetele (optional)
-    guestName_label: Numele Dvs.
-    guestName_helpText: Oferiți-ne numele Dvs.
-    guestName_placeholder: Scrie numele Dvs.
-    email_label: Adresa de e-mail
-    email_placeholder: Scrie adresa de e-mail
-    subject_label: Subiectele articolului
-    subject_helpText: Specificați la ce întrebări trebuie să răspundă viitorul articol
-    subject_placeholder: Scrie întrebările tale aici! Întrebare nouă, linie nouă!
+    title_label: Titlu propus
+    title_helpText: Propune un titlu pentru articolul cerut. Acest câmp este opțional și poate fi omis.
+    title_placeholder: Scrie aici titlul
+    topic_label: Subiectul dezvoltat
+    topic_helpText: Specifică subiectul/subiectele care vreai să fie dezvoltate în articol. Acest câmp este opțional.
+    topic_placeholder: Scrie aici subiectul dezvoltat
+    tags_label: Etichete
+    tags_helpText: Propune etichete noi sau alege din etichetele existente
+    tags_placeholder: Scrie aici sau selectează etichetele. Acest câmp este opțional.
+    guestName_label: Nume/pseudonim
+    guestName_helpText: Propune un nume pentru identificare și comunicare.
+    guestName_placeholder: Scrie aici un nume/pseudonim
+    email_label: Email
+    email_placeholder: Scrie aici emailul tău pentru a primi notificari
+    subject_label: Întrebări la care ar trebui sa răspundă articolul
+    subject_helpText: 
+    subject_placeholder: Scrie aici întrebările
     sendForm: Trimite cererea
     pText: |
       <p>Text from Admin (TODO)</p>
