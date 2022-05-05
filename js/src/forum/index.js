@@ -38,7 +38,7 @@ app.routes.articleRequestPage = {
 
 extend(IndexPage.prototype, "sidebarItems", (items) => {
   if (items.has('newDiscussion')) {
-    items.items.newDiscussion.priority = 2;
+    items.items.newDiscussion.priority = 10;
   }
 
   items.add(
@@ -49,7 +49,7 @@ extend(IndexPage.prototype, "sidebarItems", (items) => {
     },
     app.translator.trans("article-request.forum.title")
     ),
-    1
+    9
   );
 
   return items;
